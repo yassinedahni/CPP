@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 23:28:04 by ydahni            #+#    #+#             */
-/*   Updated: 2022/11/18 01:02:49 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/11/18 21:23:34 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,16 @@ class Fixed
         Fixed   operator  /(const Fixed &f);
         Fixed   operator  +(const Fixed &f);
         Fixed   operator  -(const Fixed &f);
-        bool    operator  >(const Fixed &f);
-        bool    operator  <(const Fixed &f);
-        bool    operator  >=(const Fixed &f);
-        bool    operator  <=(const Fixed &f);
-        bool    operator  ==(const Fixed &f);
-        bool    operator  !=(const Fixed &f);
+        bool    operator  >(const Fixed &f) const;
+        bool    operator  <(const Fixed &f) const;
+        bool    operator  >=(const Fixed &f) const;
+        bool    operator  <=(const Fixed &f) const;
+        bool    operator  ==(const Fixed &f) const;
+        bool    operator  !=(const Fixed &f) const;
+        static const  Fixed &min(const Fixed &f1, const Fixed &f2);
+        static const  Fixed &max(const Fixed &f1, const Fixed &f2);
+        static Fixed &min(Fixed &f1, Fixed &f2);
+        static Fixed &max(Fixed &f1, Fixed &f2);
         Fixed();
         Fixed(Fixed const &a);
         Fixed(const int a);

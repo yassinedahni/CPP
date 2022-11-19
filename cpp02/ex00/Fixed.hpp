@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 23:28:04 by ydahni            #+#    #+#             */
-/*   Updated: 2022/11/17 21:03:20 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/11/18 21:36:41 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Fixed
         int  getRawBits() const;
         Fixed &operator = (const Fixed &object);
         Fixed();
-        Fixed(Fixed const &a);
+        Fixed(const Fixed &a);
         ~Fixed();
 };
 

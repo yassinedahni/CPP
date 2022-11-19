@@ -6,14 +6,14 @@
 #    By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/01 23:24:39 by ydahni            #+#    #+#              #
-#    Updated: 2022/11/17 22:53:04 by ydahni           ###   ########.fr        #
+#    Updated: 2022/11/18 21:27:57 by ydahni           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 fixed = fixed
 CPPFLAGS = -Wextra -Wall -Werror -std=c++98
 CC = c++
-SRC = main.cpp Fixed.cpp operator.cpp
+SRC = main.cpp Fixed.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
