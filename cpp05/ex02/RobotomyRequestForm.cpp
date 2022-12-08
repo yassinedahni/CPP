@@ -1,0 +1,65 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/08 21:39:04 by ydahni            #+#    #+#             */
+/*   Updated: 2022/12/08 23:03:10 by ydahni           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "RobotomyRequestForm.hpp"
+
+
+RobotomyRequestForm::RobotomyRequestForm() : Form("RobotomyRequestForm", 72, 45)
+{
+    std::cout << "[ RobotomyRequestForm ]: Default constructor called" << std::endl;
+    this->target = nullptr;
+}
+
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("RobotomyRequestForm", 72, 45)
+{
+    this->target = target;
+}
+
+
+RobotomyRequestForm::~RobotomyRequestForm()
+{
+    std::cout << "[ RobotomyRequestForm ]: Destructor called" << std::endl;
+   
+}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &r)
+{
+    std::cout << "[ RobotomyRequestForm ]: Copy constructor called" << std::endl;
+    this->count = r.count;
+}
+
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &r)
+{
+    std::cout << "[ RobotomyRequestForm ]: Copy assignment operator called" << std::endl;
+    this->count = r.count;
+    return (*this);
+}
+
+void RobotomyRequestForm::message() const 
+{
+    srand(time(0));
+    int r = rand();
+    if (r % 2 == 0)
+    {
+        std::cout << "[ RobotomyRequestForm ]: " << this->target << " has been robotomized successfully 50% of the time" << std::endl;
+    }
+    else
+        std::cout << "[ RobotomyRequestForm ]: the robotomy failed" << std::endl;
+}
+
+void RobotomyRequestForm::execute(Bureaucrat const &executor) const
+{
+    if (this->getSign() == 1 && executor.getGrade() <= this->getGradeExecute())
+        message();
+    else
+        throw RobotomyRequestForm::GradeTooLowException();
+}

@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 15:28:47 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/07 23:45:46 by ydahni           ###   ########.fr       */
+/*   Created: 2022/12/03 15:44:28 by ydahni            #+#    #+#             */
+/*   Updated: 2022/12/08 23:57:28 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-#define ANIMAL_H
+#include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-#include <iostream>
-
-class Animal
+int main()
 {
-    protected :
-        std::string type;
-    public :
-        Animal();
-        virtual ~Animal();
-        Animal(const Animal &a);
-        Animal & operator=(const Animal &a); 
-        virtual std::string getType() const;
-        virtual void makeSound() const;
-};
-
-
-
-#endif
+    try
+    {
+        Bureaucrat a("yassine", 1);
+        ShrubberyCreationForm b("dahni");
+        b.beSigned(a);
+        a.executeForm(b);
+    }
+    catch(std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+}
