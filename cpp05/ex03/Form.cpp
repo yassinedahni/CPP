@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:15:45 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:05:41 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/10 01:01:50 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,17 @@ const char *Form::GradeTooHighException::what() const throw()
 const char *Form::GradeTooLowException::what() const throw()
 {
     return ("[ Form ]: Grade Too Low Exception");
+}
+
+const char *Form::NotExecuteException::what() const throw()
+{
+    return ("[ Form ]: Not Execute Exception");
+}
+
+
+const char *Form::InternException::what() const throw()
+{
+    return ("[ Intern ]: Form Didn't Create Exception");
 }
 
 std::ostream &operator<<(std::ostream &cout, const Form &f)

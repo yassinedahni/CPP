@@ -1,63 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 16:15:01 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:07:03 by ydahni           ###   ########.fr       */
+/*   Created: 2022/12/03 15:45:47 by ydahni            #+#    #+#             */
+/*   Updated: 2022/12/08 18:51:34 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_H
-#define FORM_H
-
+#ifndef BUREAUCRAT_H
+#define BUREAUCRAT_H
 
 #include <iostream>
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-class Bureaucrat;
+class Form;
 
-class Form
+class Bureaucrat
 {
     private:
         const std::string name;
-        bool sign;
-        const int gradeSign;
-        const int gradeExecute;
+        int grade;
     public:
         std::string getName() const;
-        bool getSign() const;
-        int getGradeSign() const;
-        int getGradeExecute() const;
+        int getGrade() const;
+        void increment();
+        void decrement();
         class GradeTooHighException : public std::exception
         {
             public :
                 virtual const char* what() const throw();
-            
         };
         class GradeTooLowException : public std::exception
         {
             public :
                 virtual const char* what() const throw();
-            
         };
-        class NotExecuteException : public std::exception
-        {
-            public :
-                virtual const char* what() const throw();
-            
-        };
-        void beSigned(const Bureaucrat &b);
-        Form(std::string name, int gradeSign, int gradeExecute);
-        Form();
-        Form(const Form &f);
-        Form &operator=(const Form &f);
-        ~Form();
-        virtual void execute(Bureaucrat const & executor) const = 0;
+        void executeForm(Form const & form);
+        void signForm(Form &f);
+        Bureaucrat();
+        Bureaucrat(std::string name, int grade);
+        Bureaucrat(const Bureaucrat &b);
+        Bureaucrat &operator=(const Bureaucrat &b);
+        ~Bureaucrat();
 };
 
-std::ostream &operator<<(std::ostream &cout, const Form &f);
+std::ostream &operator<<(std::ostream &cout, const Bureaucrat &b);
+
+
 
 #endif

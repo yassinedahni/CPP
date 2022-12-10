@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:15:01 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:07:03 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/10 00:59:25 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,12 @@ class Form
             
         };
         class NotExecuteException : public std::exception
+        {
+            public :
+                virtual const char* what() const throw();
+            
+        };
+        class InternException : public std::exception
         {
             public :
                 virtual const char* what() const throw();

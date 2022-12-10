@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 21:36:39 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/09 23:29:50 by ydahni           ###   ########.fr       */
+/*   Created: 2022/12/08 23:03:38 by ydahni            #+#    #+#             */
+/*   Updated: 2022/12/08 23:33:27 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_H
-#define ROBOTOMYREQUESTFORM_H
+#ifndef PRESIDENTIALPARDONFORM_H
+#define PRESIDENTIALPARDONFORM_H
 
-#include "Form.hpp"
 #include <iostream>
+#include "Form.hpp"
 
-
-class RobotomyRequestForm : public Form
+class PresidentialPardonForm : public Form
 {
-    private:
+    private :
         std::string target;
-    public:
-        void message() const;
+    public :
         void execute(Bureaucrat const & executor) const;
-        RobotomyRequestForm(std::string target);
-        RobotomyRequestForm();
-        RobotomyRequestForm(const RobotomyRequestForm &r);
-        RobotomyRequestForm &operator=(const RobotomyRequestForm &r);
-        ~RobotomyRequestForm();
+        void message() const;
+        PresidentialPardonForm(std::string target);
+        PresidentialPardonForm();
+        PresidentialPardonForm(const PresidentialPardonForm &p);
+        PresidentialPardonForm &operator=(const PresidentialPardonForm &p);
+        ~PresidentialPardonForm();
+    
 };
+
+
+
 
 #endif

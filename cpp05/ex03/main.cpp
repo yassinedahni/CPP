@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 15:44:28 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:09:59 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/10 01:02:04 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
     try
     {
-        Bureaucrat a("yassine", 12);
-        ShrubberyCreationForm b("dahni");
-        b.beSigned(a);
-        a.executeForm(b);
+        Bureaucrat a("yassine", 30);
+        Intern someRandomIntern;
+        Form* rrf;
+        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+        rrf->beSigned(a);
+        a.executeForm(*rrf);
     }
     catch(std::exception &e)
     {

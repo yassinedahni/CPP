@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 15:44:28 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:09:59 by ydahni           ###   ########.fr       */
+/*   Created: 2022/12/09 15:30:37 by ydahni            #+#    #+#             */
+/*   Updated: 2022/12/09 23:34:31 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
+#ifndef INTERN_H
+#define INTERN_H
 
-int main()
+#include <iostream>
+#include "Form.hpp"
+
+class Intern
 {
-    try
-    {
-        Bureaucrat a("yassine", 12);
-        ShrubberyCreationForm b("dahni");
-        b.beSigned(a);
-        a.executeForm(b);
-    }
-    catch(std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-}
+    public:
+        Form * makeForm(std::string name, std::string target);
+        Intern();
+        Intern(const Intern &i);
+        Intern &operator=(const Intern &i);
+        ~Intern();
+};
+
+
+#endif
