@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:39:04 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:07:53 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/11 16:27:53 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 RobotomyRequestForm::RobotomyRequestForm() : Form("RobotomyRequestForm", 72, 45)
 {
     std::cout << "[ RobotomyRequestForm ]: Default constructor called" << std::endl;
-    this->target = nullptr;
+    this->target = "";
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("RobotomyRequestForm", 72, 45)
@@ -48,7 +48,7 @@ void RobotomyRequestForm::message() const
 {
     if (time(NULL) % 2 == 0)
     {
-        std::cout << "[ RobotomyRequestForm ]: " << this->target << " has been robotomized successfully 50% of the time" << std::endl;
+        std::cout << "[ RobotomyRequestForm ]: " << this->target << " has been robotomized successfully" << std::endl;
     }
     else
         std::cout << "[ RobotomyRequestForm ]: the robotomy failed" << std::endl;

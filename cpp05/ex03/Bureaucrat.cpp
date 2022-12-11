@@ -6,16 +6,16 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 15:45:39 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/08 21:03:36 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/11 16:27:35 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : name(nullptr)
+Bureaucrat::Bureaucrat() : name("")
 {
     std::cout << "[ Bureaucrat ]: Default constructor called" << std::endl;
-    this->grade = 0;
+    this->grade = 150;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &b) : name(b.name)

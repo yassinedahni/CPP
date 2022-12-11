@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 15:44:28 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/08 19:07:42 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/11 16:41:03 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int main()
 {
     try{
-        Bureaucrat a("yassine", 4);
-        Form b("dahni", 150, 120);
+        Bureaucrat a("yassine", 90);
         std::cout << a << std::endl;
+        Form b("dahni", 20, 120);
         std::cout << b << std::endl;
         a.signForm(b);
         b.beSigned(a);

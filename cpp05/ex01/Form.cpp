@@ -6,13 +6,13 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:15:45 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:05:41 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/11 16:27:46 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : name(nullptr),sign(0), gradeSign(0), gradeExecute(0)
+Form::Form() : name(""),sign(0), gradeSign(0), gradeExecute(0)
 {
     std::cout << "[ Form ]: Default constructor called" << std::endl;
 }

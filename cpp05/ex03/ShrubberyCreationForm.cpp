@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 18:23:42 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:01:09 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/11 16:28:11 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ShrubberyCreationForm::ShrubberyCreationForm() : Form("ShrubberyCreationForm", 145,137)
 {
     std::cout << "[ ShrubberyCreationForm ]: Default constructor called" << std::endl;
-    this->target = nullptr;
+    this->target = "";
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
@@ -43,7 +43,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 void ShrubberyCreationForm::ascii_tree() const
 {
-    std::string n = this->target + "_shrubbery.txt";
+    std::string n = this->target + "_shrubbery";
     std::ofstream file;
     file.open(n);
     if (file.is_open() != 0)

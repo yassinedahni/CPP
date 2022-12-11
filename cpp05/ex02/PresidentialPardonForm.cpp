@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:06:27 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:07:43 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/11 16:29:29 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 PresidentialPardonForm::PresidentialPardonForm() : Form("PresidentialPardonForm", 25, 5)
 {
     std::cout << "[ PresidentialPardonForm ]: Default constructor called" << std::endl;
-
+    this->target = "";
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()

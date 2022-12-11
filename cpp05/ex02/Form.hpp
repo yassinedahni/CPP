@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:15:01 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/10 01:07:03 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/11 16:00:32 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ class Form
         Form();
         Form(const Form &f);
         Form &operator=(const Form &f);
-        ~Form();
+        virtual ~Form();
         virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
