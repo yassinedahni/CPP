@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serialization.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 23:42:24 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/18 21:09:47 by ydahni           ###   ########.fr       */
+/*   Created: 2022/12/18 21:16:20 by ydahni            #+#    #+#             */
+/*   Updated: 2022/12/18 21:20:15 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Conversion.hpp"
+#ifndef SERIALIZATION_H
+#define SERIALIZATION_H
 
-int main(int ac, char **av)
+#include <iostream>
+
+struct Data
 {
-    if (ac == 2)
-        conversion(av[1]);
-    else
-        std::cout << "Please Enter 2 Parameters" << std::endl;
-}
+    int a;
+    int b;
+    char c;
+    int d;
+};
+
+uintptr_t serialize(Data* ptr);
+Data* deserialize(uintptr_t raw);
+
+
+#endif

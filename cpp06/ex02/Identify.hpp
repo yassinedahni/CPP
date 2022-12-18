@@ -1,21 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Identify.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 23:42:24 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/18 21:09:47 by ydahni           ###   ########.fr       */
+/*   Created: 2022/12/19 00:25:48 by ydahni            #+#    #+#             */
+/*   Updated: 2022/12/19 00:49:03 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Conversion.hpp"
+#ifndef IDENTIFY_H
+#define IDENTIFY_H
 
-int main(int ac, char **av)
+#include <iostream>
+
+class Base
 {
-    if (ac == 2)
-        conversion(av[1]);
-    else
-        std::cout << "Please Enter 2 Parameters" << std::endl;
-}
+    public :
+        virtual ~Base();
+};
+
+class A : public Base
+{
+    
+};
+
+class B : public Base
+{
+    
+};
+
+class C : public Base
+{
+    
+};
+
+Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);
+
+#endif

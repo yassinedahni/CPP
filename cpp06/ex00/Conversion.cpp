@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 23:41:07 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/18 01:05:04 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/19 00:09:05 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,7 +157,7 @@ int check_error(std::string s)
 
 void convert_to_double(std::string s)
 {
-    float r = std::atof(s.c_str());
+    double r = std::strtod(s.c_str(), NULL);
     size_t p = s.find(".");
     int c = 0;
     if (s.find(".") != std::string::npos)

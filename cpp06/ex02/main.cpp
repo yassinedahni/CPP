@@ -5,17 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 23:42:24 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/18 21:09:47 by ydahni           ###   ########.fr       */
+/*   Created: 2022/12/19 00:26:44 by ydahni            #+#    #+#             */
+/*   Updated: 2022/12/19 00:52:42 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Conversion.hpp"
+#include "Identify.hpp"
 
-int main(int ac, char **av)
+int main()
 {
-    if (ac == 2)
-        conversion(av[1]);
-    else
-        std::cout << "Please Enter 2 Parameters" << std::endl;
+    Base *a = generate();
+    identify(a);
+    Base &r = *a;
+    identify(r);
+    delete(a);
 }
