@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 00:26:32 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/19 00:53:45 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/19 18:50:02 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Base * generate(void)
 
 void identify(Base* p)
 {
+    
     Base *a = dynamic_cast<A *> (p);
     if (a == nullptr)
         std::cout << "bad::cast" << std::endl;
