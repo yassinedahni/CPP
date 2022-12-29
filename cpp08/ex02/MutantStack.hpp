@@ -6,7 +6,7 @@
 /*   By: ydahni <ydahni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 00:38:41 by ydahni            #+#    #+#             */
-/*   Updated: 2022/12/28 00:52:57 by ydahni           ###   ########.fr       */
+/*   Updated: 2022/12/29 02:34:26 by ydahni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <iostream>
 #include <stack>
 #include <list>
-
 
 template <typename S>
 class MutantStack : public std::stack<S>
@@ -59,7 +58,6 @@ MutantStack<S>::MutantStack()
 template <typename S>
 MutantStack<S>::~MutantStack()
 {
-    
 }
 
 
